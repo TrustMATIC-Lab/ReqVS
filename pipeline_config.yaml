@@ -1,0 +1,98 @@
+# Unified data processing pipeline configuration file
+
+# Input folder path (relative to script directory or absolute path)
+input_folder: "test_results/DUD-E"
+
+# Input file prefix format
+# Example: If files are DUD-E_modelname.csv, fill in "DUD-E"
+# If files are DUD-E_out_modelname.csv, fill in "DUD-E_out"
+input_file_prefix: "DUD-E"
+
+# Output configuration
+output:
+  # Output folder name (suffix will be automatically added)
+  folder_name: "results"
+  
+  # Output file suffix (for distinguishing different experiments)
+  suffix: "_DUD-E_analysis"
+  
+  # Output file naming format (optional, for customizing output file names)
+  # If empty, default naming will be used
+  file_names:
+    aggregated: "model_predictions_aggregated"
+    consistency_entropy: "consensus_entropy_analysis"
+    model_metrics: "model_consensus_metrics"
+    ef_prefix: "enrichment_factor"
+    consensus_score: "consensus_score"
+    ensemble_score: "ensemble_score"
+    performance_summary: "performance_summary"
+    performance_plot: "performance_boxplot"
+
+# Model configuration
+models:
+  # Classifier model list (these models' predictions are already probability values between 0-1)
+  classifier_models:
+    - name: drugban
+      display_name: Drugban
+    - name: mcanet
+      display_name: MCANet
+    - name: hitscreen
+      display_name: HitScreen
+    - name: coldstartcpi
+      display_name: ColdstartCPI
+  
+  # Regressor model list (these models' predictions need to be normalized to 0-1)
+  regressor_models:
+    - name: graphdta
+      display_name: GraphDTA
+    - name: mgraphdta
+      display_name: MGraphDTA
+    - name: psichic
+      display_name: PSICHIC
+    - name: deepdtagen
+      display_name: DeepDTAGen
+
+# Key column names configuration
+key_columns:
+  - ID
+  - Protein
+  - SMILES
+  - Y
+
+# Entropy penalty coefficient (for consensus score calculation)
+lambda_entropy: 0.2
+
+# Plotting configuration
+plotting:
+  # Metrics to plot
+  metrics_to_plot:
+    - EF0.1%
+    - EF0.5%
+    - EF1%
+    - BEDROC
+  
+  # Metric display labels
+  metric_labels:
+    EF0.1%: "EF 0.1%"
+    EF0.5%: "EF 0.5%"
+    EF1%: "EF 1%"
+    BEDROC: "BEDROC"
+  
+  # Layout: n_rows rows × n_cols columns
+  n_rows: 2
+  n_cols: 2
+  
+  # Figure size
+  fig_width: 11
+  fig_height_base: 14
+  dpi: 600
+  
+  # Font sizes
+  fontsize_method_label: 12
+  fontsize_xlabel: 10
+  fontsize_ylabel: 10
+  
+  # Color configuration
+  color_palette: ['#d43325','#e45238','#ef764f','#fbb475','#fff2ad','#f4fad4','#4476b3','#7dacd1','#b8d7e9']
+  consensus_label_color: 'red'
+  consensus_label_weight: 'bold'

@@ -1,0 +1,71 @@
+{
+  "dataset": "/root/autodl-tmp/benchmarks/DUD-E.csv",
+  "execution_mode": "parallel",
+  "log_dir": "./logs",
+  "models": [
+    {
+      "name": "coldstartcpi",
+      "enabled": true,
+      "script_path": "Predictions/benchmark_test.py",
+      "env_name": "coldstartcpi",
+      "device": "cuda:0",
+      "extra_args": {}
+    },
+    {
+      "name": "deepdtagen",
+      "enabled": true,
+      "script_path": "benchmark_test.py",
+      "env_name": "deepdtagen",
+      "device": "cuda:0",
+      "extra_args": {}
+    },
+    {
+      "name": "drugban",
+      "enabled": true,
+      "script_path": "benchmark_test.py",
+      "env_name": "drugban",
+      "device": "cuda:1",
+      "extra_args": {}
+    },
+    {
+      "name": "graphdta",
+      "enabled": true,
+      "script_path": "benchmark_test.py",
+      "env_name": "graphdta",
+      "device": "cuda:1",
+      "extra_args": {}
+    },
+    {
+      "name": "hitscreen",
+      "enabled": true,
+      "script_path": "benchmark_test.py",
+      "env_name": "hitscreen",
+      "device": "cuda:2",
+      "extra_args": {}
+    },
+    {
+      "name": "mcanet",
+      "enabled": true,
+      "script_path": "benchmark_test.py",
+      "env_name": "mcanet",
+      "device": "cuda:2",
+      "extra_args": {}
+    },
+    {
+      "name": "mgraphdta",
+      "enabled": true,
+      "script_path": "regression/benchmark_test.py",
+      "env_name": "mgraphdta",
+      "device": "cuda:3",
+      "extra_args": {}
+    },
+    {
+      "name": "psichic",
+      "enabled": true,
+      "script_path": "benchmark_test.py",
+      "env_name": "psichic",
+      "device": "cuda:3",
+      "extra_args": {}
+    }
+  ]
+}
