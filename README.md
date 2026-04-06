@@ -3,7 +3,7 @@ Source codes for paper "From Sequence to Hit: Reliable Virtual Screening via Int
 
 ## Framework Overview
 
-![ReqVS Framework](framework0401.odf)
+![ReqVS Framework](framework0401.pdf)
 
 ## Environment Setup and Dependencies
 
