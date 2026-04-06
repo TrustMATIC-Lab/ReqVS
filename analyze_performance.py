@@ -270,15 +270,15 @@ def get_method_name_mapping(config=None):
     """
     mapping = {
         # Classifier group consensus
-        'DTI SE Consensus': r'DrugCS$^2$-EPI',
+        'DTI SE Consensus': 'ReqVS-EPI',
         # Regressor group consensus
-        'DTA SE Consensus': r'DrugCS$^2$-EPA',
+        'DTA SE Consensus': 'ReqVS-EPA',
         # Overall consensus score
-        'Overall SE Consensus': r'DrugCS$^2$',
+        'Overall SE Consensus': 'ReqVS',
         # Ensemble
-        'DTI Ensemble': r'DrugCS$^2$-ESI',
-        'DTA Ensemble': r'DrugCS$^2$-ESA',
-        'Overall Ensemble': r'DrugCS$^2$-ES',
+        'DTI Ensemble': 'ReqVS-ESI',
+        'DTA Ensemble': 'ReqVS-ESA',
+        'Overall Ensemble': 'ReqVS-ES',
     }
     
     # If config is provided, use display_name from config
