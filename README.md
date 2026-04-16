@@ -7,7 +7,12 @@ Source codes for paper "From Sequence to Hit: Reliable Virtual Screening via Int
 
 ## Environment Setup and Dependencies
 
-The provided environments have been tested and can run on Linux systems with CUDA 11.8. You can either download the model environments directly via the provided download links, or visit their project pages to set up environments yourself.
+### System Requirements
+
+- **Operating System**: Ubuntu 22.04
+- **CUDA**: 11.8
+
+The downloadable pre-packaged environments are built and validated under the configuration above. If you use other operating systems, Python/CUDA versions, or hardware/software setups, please install and configure dependencies manually according to each model repository listed below. The installation typically takes about 1-3 hours for download enviroment.
 
 ### DTI Models
 - **Drugban**: [Repository Link](https://github.com/peizhenbai/DrugBAN)
@@ -24,7 +29,7 @@ The provided environments have been tested and can run on Linux systems with CUD
 We sincerely acknowledge and thank the authors of these models for their valuable contributions to the community, which have made this work possible.
 ## Quick Reproduction
 
-You can directly download the **[pre-computed results](https://zenodo.org/records/18464350)** for DUD-E and DEKOIS2.0 of all 8 models, extract them to the `test_results` folder, and run `analysis_pipeline_DEKOIS2.ipynb` and `analysis_pipeline_DUD_E.ipynb` to test the results directly.
+You can directly download the **[pre-computed results](https://zenodo.org/records/18464350)** for DUD-E and DEKOIS2.0 of all 8 models, extract them to the `test_results` folder, and run `analysis_pipeline_DEKOIS2.ipynb` and `analysis_pipeline_DUD_E.ipynb` to test the results directly. Running the demo typically takes about an hour on a normal desktop computer.
 
 ## Quick Start
 
